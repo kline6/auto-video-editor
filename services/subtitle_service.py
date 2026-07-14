@@ -905,9 +905,9 @@ def eff_block_fade(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\alpha&H28&\\fscx94\\fscy94"
-        f"\\t(0,180,\\alpha&H00&\\fscx106\\fscy106)"
-        f"\\t(180,320,\\fscx100\\fscy100)"
+        f"\\alpha&H50&\\fscx88\\fscy88"
+        f"\\t(0,220,\\alpha&H00&\\fscx115\\fscy115)"
+        f"\\t(220,380,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -915,9 +915,9 @@ def eff_block_soft_pop(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx96\\fscy96"
-        f"\\t(0,120,\\fscx108\\fscy108)"
-        f"\\t(120,240,\\fscx100\\fscy100)"
+        f"\\fscx70\\fscy70"
+        f"\\t(0,150,\\fscx125\\fscy125)"
+        f"\\t(150,300,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -925,8 +925,8 @@ def eff_block_pulse(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\t(0,180,\\fscx106\\fscy106)"
-        f"\\t(180,360,\\fscx100\\fscy100)"
+        f"\\t(0,200,\\fscx120\\fscy120)"
+        f"\\t(200,400,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -934,48 +934,48 @@ def eff_block_shadow(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\shad4"
-        f"\\t(0,180,\\shad2)"
+        f"\\shad10"
+        f"\\t(0,220,\\shad2)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_slide_left(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_x = max(0, cx - int(fs * 1.65))
+    start_x = max(0, cx - int(fs * 4))
     return _dial(text, s, e,
-        f"\\move({start_x},{cy},{cx},{cy},0,220)"
-        f"\\fscx96\\fscy104"
-        f"\\t(0,220,\\fscx100\\fscy100)"
+        f"\\move({start_x},{cy},{cx},{cy},0,300)"
+        f"\\fscx90\\fscy110"
+        f"\\t(0,300,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_slide_right(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_x = min(w, cx + int(fs * 1.65))
+    start_x = min(w, cx + int(fs * 4))
     return _dial(text, s, e,
-        f"\\move({start_x},{cy},{cx},{cy},0,220)"
-        f"\\fscx96\\fscy104"
-        f"\\t(0,220,\\fscx100\\fscy100)"
+        f"\\move({start_x},{cy},{cx},{cy},0,300)"
+        f"\\fscx90\\fscy110"
+        f"\\t(0,300,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_slide_up(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_y = min(h, cy + int(fs * 1.25))
+    start_y = min(h, cy + int(fs * 3))
     return _dial(text, s, e,
-        f"\\move({cx},{start_y},{cx},{cy},0,220)"
-        f"\\fscx104\\fscy96"
-        f"\\t(0,220,\\fscx100\\fscy100)"
+        f"\\move({cx},{start_y},{cx},{cy},0,300)"
+        f"\\fscx110\\fscy90"
+        f"\\t(0,300,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_slide_down(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_y = max(0, cy - int(fs * 1.25))
+    start_y = max(0, cy - int(fs * 3))
     return _dial(text, s, e,
-        f"\\move({cx},{start_y},{cx},{cy},0,220)"
-        f"\\fscx104\\fscy96"
-        f"\\t(0,220,\\fscx100\\fscy100)"
+        f"\\move({cx},{start_y},{cx},{cy},0,300)"
+        f"\\fscx110\\fscy90"
+        f"\\t(0,300,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -983,23 +983,23 @@ def eff_block_bounce(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx88\\fscy88"
-        f"\\t(0,120,\\fscx112\\fscy112)"
-        f"\\t(120,220,\\fscx96\\fscy96)"
-        f"\\t(220,320,\\fscx104\\fscy104)"
-        f"\\t(320,420,\\fscx100\\fscy100)"
+        f"\\fscx60\\fscy60"
+        f"\\t(0,150,\\fscx130\\fscy130)"
+        f"\\t(150,280,\\fscx88\\fscy88)"
+        f"\\t(280,400,\\fscx106\\fscy106)"
+        f"\\t(400,500,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_shake(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    dx = max(4, int(fs * 0.08))
+    dx = max(8, int(fs * 0.15))
     return _dial(text, s, e,
-        f"\\move({cx - dx},{cy},{cx},{cy},0,180)"
-        f"\\t(0,60,\\fscx108\\fscy108)"
-        f"\\t(60,120,\\fscx96\\fscy96)"
-        f"\\t(120,220,\\fscx104\\fscy104)"
-        f"\\t(220,320,\\fscx100\\fscy100)"
+        f"\\move({cx - dx},{cy},{cx},{cy},0,250)"
+        f"\\t(0,80,\\fscx120\\fscy120)"
+        f"\\t(80,160,\\fscx88\\fscy88)"
+        f"\\t(160,280,\\fscx108\\fscy108)"
+        f"\\t(280,400,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1007,9 +1007,9 @@ def eff_block_blur_in(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\blur6"
-        f"\\fscx104\\fscy104"
-        f"\\t(0,260,\\blur0\\fscx100\\fscy100)"
+        f"\\blur12"
+        f"\\fscx110\\fscy110"
+        f"\\t(0,350,\\blur0\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1017,10 +1017,10 @@ def eff_block_squeeze(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx120\\fscy88"
-        f"\\t(0,140,\\fscx92\\fscy108)"
-        f"\\t(140,280,\\fscx106\\fscy96)"
-        f"\\t(280,380,\\fscx100\\fscy100)"
+        f"\\fscx140\\fscy70"
+        f"\\t(0,180,\\fscx85\\fscy120)"
+        f"\\t(180,320,\\fscx110\\fscy92)"
+        f"\\t(320,450,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1028,9 +1028,9 @@ def eff_block_shadow_sweep(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\shad8"
-        f"\\t(0,220,\\shad2\\fscx106\\fscy106)"
-        f"\\t(220,360,\\fscx100\\fscy100)"
+        f"\\shad16"
+        f"\\t(0,280,\\shad2\\fscx115\\fscy115)"
+        f"\\t(280,420,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1038,10 +1038,10 @@ def eff_block_zoom_in(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx72\\fscy72"
-        f"\\t(0,180,\\fscx116\\fscy116)"
-        f"\\t(180,340,\\fscx98\\fscy98)"
-        f"\\t(340,480,\\fscx100\\fscy100)"
+        f"\\fscx40\\fscy40"
+        f"\\t(0,220,\\fscx135\\fscy135)"
+        f"\\t(220,400,\\fscx92\\fscy92)"
+        f"\\t(400,550,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1049,8 +1049,8 @@ def eff_block_zoom_out(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx118\\fscy118"
-        f"\\t(0,260,\\fscx100\\fscy100)"
+        f"\\fscx150\\fscy150"
+        f"\\t(0,320,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1058,10 +1058,10 @@ def eff_block_breath_slow(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\t(0,500,\\fscx107\\fscy107)"
-        f"\\t(500,1000,\\fscx100\\fscy100)"
-        f"\\t(1000,1500,\\fscx105\\fscy105)"
-        f"\\t(1500,2000,\\fscx100\\fscy100)"
+        f"\\t(0,600,\\fscx122\\fscy122)"
+        f"\\t(600,1200,\\fscx100\\fscy100)"
+        f"\\t(1200,1800,\\fscx118\\fscy118)"
+        f"\\t(1800,2400,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1069,10 +1069,10 @@ def eff_block_breath_wide(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\t(0,450,\\fscx112\\fscy96)"
-        f"\\t(450,900,\\fscx100\\fscy100)"
-        f"\\t(900,1350,\\fscx96\\fscy110)"
-        f"\\t(1350,1800,\\fscx100\\fscy100)"
+        f"\\t(0,500,\\fscx130\\fscy85)"
+        f"\\t(500,1000,\\fscx100\\fscy100)"
+        f"\\t(1000,1500,\\fscx85\\fscy120)"
+        f"\\t(1500,2000,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1080,10 +1080,10 @@ def eff_block_glow_in(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\bord8\\blur4"
-        f"\\t(0,360,\\bord3\\blur0)"
-        f"\\t(900,1300,\\bord6\\blur2)"
-        f"\\t(1300,1700,\\bord3\\blur0)"
+        f"\\bord16\\blur8"
+        f"\\t(0,400,\\bord3\\blur0)"
+        f"\\t(1000,1500,\\bord10\\blur5)"
+        f"\\t(1500,2000,\\bord3\\blur0)"
         f"\\fad(0,120)", an)
 
 
@@ -1091,31 +1091,35 @@ def eff_block_glow_pulse(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\bord4\\blur1"
-        f"\\t(0,350,\\bord7\\blur3)"
-        f"\\t(350,700,\\bord3\\blur0)"
-        f"\\t(1000,1400,\\bord6\\blur2)"
-        f"\\t(1400,1800,\\bord3\\blur0)"
+        f"\\bord6\\blur2"
+        f"\\t(0,400,\\bord14\\blur6)"
+        f"\\t(400,800,\\bord3\\blur0)"
+        f"\\t(1100,1600,\\bord12\\blur5)"
+        f"\\t(1600,2100,\\bord3\\blur0)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_float_up(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_y = min(h, cy + int(fs * 1.25))
+    start_y = min(h, cy + int(fs * 3))
     return _dial(text, s, e,
-        f"\\move({cx},{start_y},{cx},{cy},0,360)"
-        f"\\t(800,1300,\\fscx105\\fscy105)"
-        f"\\t(1300,1800,\\fscx100\\fscy100)"
+        f"\\move({cx},{start_y},{cx},{cy},0,450)"
+        f"\\t(0,200,\\fscx90\\fscy90)"
+        f"\\t(200,400,\\fscx100\\fscy100)"
+        f"\\t(900,1400,\\fscx110\\fscy110)"
+        f"\\t(1400,1900,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_float_down(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_y = max(0, cy - int(fs * 1.25))
+    start_y = max(0, cy - int(fs * 3))
     return _dial(text, s, e,
-        f"\\move({cx},{start_y},{cx},{cy},0,360)"
-        f"\\t(800,1300,\\fscx105\\fscy105)"
-        f"\\t(1300,1800,\\fscx100\\fscy100)"
+        f"\\move({cx},{start_y},{cx},{cy},0,450)"
+        f"\\t(0,200,\\fscx90\\fscy90)"
+        f"\\t(200,400,\\fscx100\\fscy100)"
+        f"\\t(900,1400,\\fscx110\\fscy110)"
+        f"\\t(1400,1900,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1123,10 +1127,10 @@ def eff_block_shadow_dance(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\shad10"
-        f"\\t(0,300,\\shad2)"
-        f"\\t(800,1200,\\shad8\\fscx105\\fscy105)"
-        f"\\t(1200,1600,\\shad2\\fscx100\\fscy100)"
+        f"\\shad20"
+        f"\\t(0,350,\\shad2)"
+        f"\\t(900,1400,\\shad14\\fscx112\\fscy112)"
+        f"\\t(1400,1800,\\shad2\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1134,11 +1138,11 @@ def eff_block_soft_blink(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\alpha&H20&"
-        f"\\t(0,220,\\alpha&H00&\\fscx108\\fscy108)"
-        f"\\t(220,420,\\fscx100\\fscy100)"
-        f"\\t(900,1150,\\alpha&H18&)"
-        f"\\t(1150,1400,\\alpha&H00&)"
+        f"\\alpha&H50&\\fscx85\\fscy85"
+        f"\\t(0,280,\\alpha&H00&\\fscx115\\fscy115)"
+        f"\\t(280,480,\\fscx100\\fscy100)"
+        f"\\t(1000,1300,\\alpha&H40&)"
+        f"\\t(1300,1600,\\alpha&H00&)"
         f"\\fad(0,120)", an)
 
 
@@ -1146,11 +1150,11 @@ def eff_block_rubber_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx118\\fscy88"
-        f"\\t(0,120,\\fscx92\\fscy112)"
-        f"\\t(120,240,\\fscx110\\fscy94)"
-        f"\\t(240,360,\\fscx98\\fscy104)"
-        f"\\t(360,480,\\fscx100\\fscy100)"
+        f"\\fscx150\\fscy70"
+        f"\\t(0,150,\\fscx80\\fscy130)"
+        f"\\t(150,300,\\fscx115\\fscy88)"
+        f"\\t(300,450,\\fscx95\\fscy108)"
+        f"\\t(450,580,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1158,10 +1162,10 @@ def eff_block_blur_pulse(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\blur5"
-        f"\\t(0,260,\\blur0)"
-        f"\\t(900,1200,\\blur2\\fscx105\\fscy105)"
-        f"\\t(1200,1500,\\blur0\\fscx100\\fscy100)"
+        f"\\blur10"
+        f"\\t(0,350,\\blur0)"
+        f"\\t(900,1300,\\blur5\\fscx112\\fscy112)"
+        f"\\t(1300,1700,\\blur0\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1169,11 +1173,11 @@ def eff_block_pop_twice(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx90\\fscy90"
-        f"\\t(0,120,\\fscx116\\fscy116)"
-        f"\\t(120,260,\\fscx100\\fscy100)"
-        f"\\t(850,1000,\\fscx110\\fscy110)"
-        f"\\t(1000,1180,\\fscx100\\fscy100)"
+        f"\\fscx60\\fscy60"
+        f"\\t(0,150,\\fscx130\\fscy130)"
+        f"\\t(150,320,\\fscx100\\fscy100)"
+        f"\\t(900,1100,\\fscx118\\fscy118)"
+        f"\\t(1100,1350,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1181,10 +1185,10 @@ def eff_block_spark_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\bord6\\blur2\\shad4"
-        f"\\t(0,220,\\bord3\\blur0\\shad2)"
-        f"\\t(900,1150,\\bord7\\blur3\\shad6)"
-        f"\\t(1150,1450,\\bord3\\blur0\\shad2)"
+        f"\\bord12\\blur5\\shad10"
+        f"\\t(0,280,\\bord3\\blur0\\shad2)"
+        f"\\t(1000,1350,\\bord10\\blur4\\shad8)"
+        f"\\t(1350,1700,\\bord3\\blur0\\shad2)"
         f"\\fad(0,120)", an)
 
 
@@ -1192,10 +1196,10 @@ def eff_block_color_pop(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx82\\fscy82\\1c&H0000FF&"
-        f"\\t(0,240,\\fscx118\\fscy118\\1c&H00FFFF&)"
-        f"\\t(240,540,\\fscx96\\fscy96\\1c&H00FF00&)"
-        f"\\t(540,900,\\fscx100\\fscy100\\1c&H00FFFFFF&)"
+        f"\\fscx50\\fscy50\\1c&H0000FF&"
+        f"\\t(0,280,\\fscx135\\fscy135\\1c&H00FFFF&)"
+        f"\\t(280,600,\\fscx88\\fscy88\\1c&H00FF00&)"
+        f"\\t(600,1000,\\fscx100\\fscy100\\1c&H00FFFFFF&)"
         f"\\fad(0,120)", an)
 
 
@@ -1203,11 +1207,11 @@ def eff_block_color_flash_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\1c&H0000FF&\\bord5"
-        f"\\t(0,220,\\1c&H00FFFF&\\bord8)"
-        f"\\t(220,460,\\1c&H00FF00&\\bord4)"
-        f"\\t(460,700,\\1c&H00FFFFFF&\\bord6)"
-        f"\\t(700,900,\\bord3)"
+        f"\\1c&H0000FF&\\bord8\\fscx85\\fscy85"
+        f"\\t(0,300,\\1c&H00FFFF&\\bord12\\fscx115\\fscy115)"
+        f"\\t(300,550,\\1c&H00FF00&\\bord5\\fscx95\\fscy95)"
+        f"\\t(550,800,\\1c&H00FFFFFF&\\bord3\\fscx105\\fscy105)"
+        f"\\t(800,1000,\\fscx100\\fscy100\\bord3)"
         f"\\fad(0,120)", an)
 
 
@@ -1215,10 +1219,10 @@ def eff_block_flip_h_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx42\\fscy100"
-        f"\\t(0,320,\\fscx122\\fscy100)"
-        f"\\t(320,620,\\fscx92\\fscy100)"
-        f"\\t(620,900,\\fscx100\\fscy100)"
+        f"\\fscx20\\fscy100"
+        f"\\t(0,350,\\fscx140\\fscy100)"
+        f"\\t(350,700,\\fscx85\\fscy100)"
+        f"\\t(700,1000,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1226,10 +1230,10 @@ def eff_block_flip_v_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\fscx100\\fscy42"
-        f"\\t(0,320,\\fscx100\\fscy122)"
-        f"\\t(320,620,\\fscx100\\fscy92)"
-        f"\\t(620,900,\\fscx100\\fscy100)"
+        f"\\fscx100\\fscy20"
+        f"\\t(0,350,\\fscx100\\fscy140)"
+        f"\\t(350,700,\\fscx100\\fscy85)"
+        f"\\t(700,1000,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1237,9 +1241,9 @@ def eff_block_letter_spread(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\alpha&H38&\\fsp14\\fscx92\\fscy92"
-        f"\\t(0,420,\\alpha&H00&\\fsp2\\fscx108\\fscy108)"
-        f"\\t(420,900,\\fsp0\\fscx100\\fscy100)"
+        f"\\alpha&H50&\\fsp30\\fscx85\\fscy85"
+        f"\\t(0,500,\\alpha&H00&\\fsp3\\fscx115\\fscy115)"
+        f"\\t(500,1000,\\fsp0\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
@@ -1247,55 +1251,55 @@ def eff_block_focus_spread(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
     return _dial(text, s, e,
         f"\\pos({cx},{cy})"
-        f"\\blur8\\fsp10"
-        f"\\t(0,520,\\blur1\\fsp1\\fscx108\\fscy108)"
-        f"\\t(520,900,\\blur0\\fsp0\\fscx100\\fscy100)"
+        f"\\blur15\\fsp25"
+        f"\\t(0,600,\\blur1\\fsp2\\fscx118\\fscy118)"
+        f"\\t(600,1100,\\blur0\\fsp0\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_slam_left_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_x = max(0, cx - int(fs * 2.2))
+    start_x = max(0, cx - int(fs * 5))
     return _dial(text, s, e,
-        f"\\move({start_x},{cy},{cx},{cy},0,360)"
-        f"\\fscx70\\fscy125"
-        f"\\t(0,360,\\fscx116\\fscy92)"
-        f"\\t(360,650,\\fscx96\\fscy106)"
-        f"\\t(650,900,\\fscx100\\fscy100)"
+        f"\\move({start_x},{cy},{cx},{cy},0,450)"
+        f"\\fscx50\\fscy140"
+        f"\\t(0,450,\\fscx125\\fscy85)"
+        f"\\t(450,750,\\fscx90\\fscy110)"
+        f"\\t(750,1000,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_slam_right_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_x = min(w, cx + int(fs * 2.2))
+    start_x = min(w, cx + int(fs * 5))
     return _dial(text, s, e,
-        f"\\move({start_x},{cy},{cx},{cy},0,360)"
-        f"\\fscx70\\fscy125"
-        f"\\t(0,360,\\fscx116\\fscy92)"
-        f"\\t(360,650,\\fscx96\\fscy106)"
-        f"\\t(650,900,\\fscx100\\fscy100)"
+        f"\\move({start_x},{cy},{cx},{cy},0,450)"
+        f"\\fscx50\\fscy140"
+        f"\\t(0,450,\\fscx125\\fscy85)"
+        f"\\t(450,750,\\fscx90\\fscy110)"
+        f"\\t(750,1000,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_drop_big_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_y = max(0, cy - int(fs * 1.8))
+    start_y = max(0, cy - int(fs * 4))
     return _dial(text, s, e,
-        f"\\move({cx},{start_y},{cx},{cy},0,420)"
-        f"\\fscx88\\fscy120"
-        f"\\t(0,420,\\fscx108\\fscy92)"
-        f"\\t(420,900,\\fscx100\\fscy100)"
+        f"\\move({cx},{start_y},{cx},{cy},0,500)"
+        f"\\fscx75\\fscy135"
+        f"\\t(0,500,\\fscx115\\fscy88)"
+        f"\\t(500,1000,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
 def eff_block_rise_big_safe(text, s, e, an, w, h, fs):
     cx, cy = w // 2, _y_pos(an, h)
-    start_y = min(h, cy + int(fs * 1.8))
+    start_y = min(h, cy + int(fs * 4))
     return _dial(text, s, e,
-        f"\\move({cx},{start_y},{cx},{cy},0,420)"
-        f"\\fscx88\\fscy120"
-        f"\\t(0,420,\\fscx108\\fscy92)"
-        f"\\t(420,900,\\fscx100\\fscy100)"
+        f"\\move({cx},{start_y},{cx},{cy},0,500)"
+        f"\\fscx75\\fscy135"
+        f"\\t(0,500,\\fscx115\\fscy88)"
+        f"\\t(500,1000,\\fscx100\\fscy100)"
         f"\\fad(0,120)", an)
 
 
