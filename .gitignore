@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+work/
+final/
+.streamlit/
+*.temp.*
+*.temp*.mp4
